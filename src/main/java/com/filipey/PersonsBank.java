@@ -1,6 +1,6 @@
 package com.filipey;
 
-import com.filipey.exceptions.EmptySaveException;
+import com.filipey.exceptions.EmptyBankException;
 import com.filipey.exceptions.NamelessPersonException;
 import com.filipey.models.Person;
 
@@ -31,7 +31,7 @@ public class PersonsBank {
     public void remove(Person person) {
 
         if (this.persons.isEmpty()) {
-            throw new EmptySaveException();
+            throw new EmptyBankException();
         }
 
         this.persons.remove(person);

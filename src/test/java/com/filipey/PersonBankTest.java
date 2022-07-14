@@ -1,6 +1,6 @@
 package com.filipey;
 
-import com.filipey.exceptions.EmptySaveException;
+import com.filipey.exceptions.EmptyBankException;
 import com.filipey.exceptions.NamelessPersonException;
 import com.filipey.models.Person;
 import org.assertj.core.api.Assertions;
@@ -53,7 +53,7 @@ public class PersonBankTest {
         Assertions.assertThat(bank.getPersons()).isEmpty();
     }
 
-    @Test(expected = EmptySaveException.class)
+    @Test(expected = EmptyBankException.class)
     public void shouldThrowErrorWhenTryRemoveOnePersonInEmptyBank() {
 
         PersonsBank bank = new PersonsBank();
